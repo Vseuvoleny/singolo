@@ -141,7 +141,7 @@
     color: #666d89;
     font-family: "Lato";
     font-weight: 900;
-    padding-top: 66px;
+    padding-top: 60px;
   }
   
   .about_p {
@@ -160,7 +160,7 @@
     align-items: center;
     flex-flow: wrap;
     justify-content: space-between;
-    margin: 45px 0 0 40px;
+    margin: 45px 0 40px;
   }
   
   .about_card {
