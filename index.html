@@ -17,7 +17,7 @@
             <nav>
                 <ul class="header_navigation">
                     <li class="list">
-                        <a class="nav_title" href="#">Home</a>
+                        <a class="nav_title active" href="#">Home</a>
                     </li>
                     <li class="list">
                         <a class="nav_title" href="#">Services</a>
@@ -37,8 +37,8 @@
         <div class="wrapper wrapper_slider">
             <div class="togle left"></div>
             <div class="slider_block">
-                <div class="vertical"><img src="./assets/iPhone_Vertical.png" alt=""></div>
-                <div class="horizontal"><img src="./assets/iPhone_Horizontal.png" alt=""></div>
+                <div class="vertical"><img class = "vertical_phone" src="./assets/iPhone_Vertical.png" alt=""></div>
+                <div class="horizontal"><img class = "horizontal_phone" src="./assets/iPhone_Horizontal.png" alt=""></div>
             </div>
             <div class="togle right"></div>
         </div>
@@ -111,14 +111,11 @@
                     sem nec elit.</p>
                 <nav class="gallery_nav">
                     <ul class="gallery_ul">
-                        <li class="gallery_list"> <input checked class="hidden" type="radio" name="radio"
-                                id="radio-1"><label class="label_togle" for="radio-1">All</label></li>
-                        <li class="gallery_list"> <input class="hidden" type="radio" name="radio" id="radio-2"><label
-                                class="label_togle" for="radio-2">Web Design</label></li>
-                        <li class="gallery_list"> <input class="hidden" type="radio" name="radio" id="radio-3"><label
-                                class="label_togle" for="radio-3">Graphic Design</label></li>
-                        <li class="gallery_list"> <input class="hidden" type="radio" name="radio" id="radio-4"><label
-                                class="label_togle" for="radio-4"> Artwork</label></li>
+                        <li class="gallery_list"> All</li>
+                        <li class="gallery_list"> Web Design</li>
+                        <li class="gallery_list"> Graphic Design</li>
+                        <li class="gallery_list">Artwork</li>  
+                        <!-- стили переделать -->
                     </ul>
                 </nav>
                 <div class="gallery_blocks">
@@ -248,6 +245,7 @@
             </section>
         </div>
     </footer>
+    
 </body>
-
+<script src="script.js"></script>
 </html>
