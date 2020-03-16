@@ -11,130 +11,155 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header home_section">
         <div class="wrapper top_wrapper">
             <h1 class="header_title"> <a href="#">Singolo <span class="title_span">*</span></a> </h1>
             <nav>
                 <ul class="header_navigation">
                     <li class="list">
-                        <a class="nav_title active" href="#">Home</a>
+                        <a class="nav_title activeList" href="home_section">Home</a>
                     </li>
                     <li class="list">
-                        <a class="nav_title" href="#">Services</a>
+                        <a class="nav_title" href="services_section">Services</a>
                     </li>
                     <li class="list">
-                        <a class="nav_title" href="#">Portfolio</a></li>
+                        <a class="nav_title" href="gallery_section">Portfolio</a></li>
                     <li class="list">
-                        <a class="nav_title" href="#">About</a></li>
+                        <a class="nav_title" href="about_section">About</a></li>
                     <li class="list">
-                        <a class="nav_title" href="#">Contact</a></li>
+                        <a class="nav_title" href="footer_section">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    <section class="slider_section">
-        <div class="wrapper wrapper_slider">
-            <div class="togle left"></div>
-            <div class="slider_block">
-                <div class="vertical"><img class = "vertical_phone" src="./assets/iPhone_Vertical.png" alt=""></div>
-                <div class="horizontal"><img class = "horizontal_phone" src="./assets/iPhone_Horizontal.png" alt=""></div>
+        <section class="slider_section">
+            <div class="slider">
+                <div class="wrapper wrapper_slider">
+
+                    <div class="slider_blocks active">
+                        <div class="slider_item slide1">
+                            <div class="vertical"><img class="vertical_phone" src="./assets/iPhone_Vertical.png" alt="">
+                            </div>
+                            <div class="horizontal"><img class="horizontal_phone" src="./assets/iPhone_Horizontal.png"
+                                    alt=""></div>
+                        </div>
+                    </div>
+                    <div class="slider_blocks slide2">
+                        <div class="slider_item ">
+                            <div><img class='phone_opacity' src="./assets/phone-vertical-3.png" alt=""></div>
+                            <div><img src="./assets/phone-vertical-2.png" alt="" class="vertical_phone"></div>
+                            <div><img class='phone_opacity' src="./assets/phone-vertical-3.png" alt=""></div>
+                        </div>
+                    </div>
+
+                    <div class="togle left">
+                        <div class="arrow left"></div>
+                    </div>
+                    <div class="togle right">
+                        <div class="arrow right"></div>
+                    </div>
+                </div>
             </div>
-            <div class="togle right"></div>
-        </div>
-    </section>
-    <section class="services_section">
-        <div class="wrapper wrapper_services">
-            <h2 class="services_title">Our Services</h2>
-            <p class="services_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
-                mollis,
-                non commodo luctus, nisi
-                erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
-                tortor
-                mauris condimentum nibh.</p>
-            <article class="services_block">
-                <article class="services_card">
-                    <img class="img_services" src="./assets/pen.png" alt="">
-                    <div class="article_text pen">
-                        <h3 class="atricle_h">Custom Design</h3>
-                        <p class="article_p">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
-                            viverra lacus ut, ultrices velit.</p>
-                    </div>
+        </section>
+        <section class="services_section">
+            <div class="wrapper wrapper_services">
+                <h2 class="services_title">Our Services</h2>
+                <p class="services_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+                    mollis,
+                    non commodo luctus, nisi
+                    erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
+                    tortor
+                    mauris condimentum nibh.</p>
+                <article class="services_block">
+                    <article class="services_card">
+                        <img class="img_services" src="./assets/pen.png" alt="">
+                        <div class="article_text pen">
+                            <h3 class="atricle_h">Custom Design</h3>
+                            <p class="article_p">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                                laoreet,
+                                viverra lacus ut, ultrices velit.</p>
+                        </div>
+                    </article>
+                    <article class="services_card">
+                        <img class="img_services" src="./assets/bulb.png" alt="">
+                        <div class="article_text bulb">
+                            <h3 class="atricle_h">Inovative Ideas</h3>
+                            <p class="article_p">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus,
+                                nec
+                                rutrum tellus dolor id lorem.</p>
+                        </div>
+                    </article>
+                    <article class="services_card">
+                        <img class="img_services" src="./assets/heart.png" alt="">
+                        <div class="article_text heart">
+                            <h3 class="atricle_h">Love Is The Answer</h3>
+                            <p class="article_p">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
+                                consequat felis. Quisque condimentum.</p>
+                        </div>
+                    </article>
+                    <article class="services_card">
+                        <img class="img_services" src="./assets/lilphone.png" alt="">
+                        <div class="article_text lilphone">
+                            <h3 class="atricle_h">Responsive Layout</h3>
+                            <p class="article_p">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit
+                                nunc
+                                ligula. Praesent elit leo.</p>
+                        </div>
+                    </article>
+                    <article class="services_card">
+                        <img class="img_services" src="./assets/bubble.png" alt="">
+                        <div class="article_text bubble">
+                            <h3 class="atricle_h"> 24 / 7 Support</h3>
+                            <p class="article_p">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem
+                                erat. Pellentesque egestas venenatis lorem .</p>
+                        </div>
+                    </article>
+                    <article class="services_card">
+                        <img class="img_services" src="./assets/star.png" alt="">
+                        <div class="article_text star">
+                            <h3 class="atricle_h">Feel Like A Star</h3>
+                            <p class="article_p">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce
+                                vitae aliquam tellus.</p>
+                        </div>
+                    </article>
                 </article>
-                <article class="services_card">
-                    <img class="img_services" src="./assets/bulb.png" alt="">
-                    <div class="article_text bulb">
-                        <h3 class="atricle_h">Inovative Ideas</h3>
-                        <p class="article_p">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec
-                            rutrum tellus dolor id lorem.</p>
-                    </div>
-                </article>
-                <article class="services_card">
-                    <img class="img_services" src="./assets/heart.png" alt="">
-                    <div class="article_text heart">
-                        <h3 class="atricle_h">Love Is The Answer</h3>
-                        <p class="article_p">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
-                            consequat felis. Quisque condimentum.</p>
-                    </div>
-                </article>
-                <article class="services_card">
-                    <img class="img_services" src="./assets/lilphone.png" alt="">
-                    <div class="article_text lilphone">
-                        <h3 class="atricle_h">Responsive Layout</h3>
-                        <p class="article_p">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc
-                            ligula. Praesent elit leo.</p>
-                    </div>
-                </article>
-                <article class="services_card">
-                    <img class="img_services" src="./assets/bubble.png" alt="">
-                    <div class="article_text bubble">
-                        <h3 class="atricle_h"> 24 / 7 Support</h3>
-                        <p class="article_p">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem
-                            erat. Pellentesque egestas venenatis lorem .</p>
-                    </div>
-                </article>
-                <article class="services_card">
-                    <img class="img_services" src="./assets/star.png" alt="">
-                    <div class="article_text star">
-                        <h3 class="atricle_h">Feel Like A Star</h3>
-                        <p class="article_p">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce
-                            vitae aliquam tellus.</p>
-                    </div>
-                </article>
-            </article>
-        </div>
-    </section>
-        <section class="gallery">
+            </div>
+        </section>
+        <section class="gallery_section">
             <div class="wrapper wrapper_gallery">
                 <h2 class="gallery_title">Portfolio</h2>
                 <p class="gallery_p">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
                     sem nec elit.</p>
                 <nav class="gallery_nav">
                     <ul class="gallery_ul">
-                        <li class="gallery_list"> All</li>
-                        <li class="gallery_list"> Web Design</li>
-                        <li class="gallery_list"> Graphic Design</li>
-                        <li class="gallery_list">Artwork</li>  
+                        <li class="gallery_list choosen all_btn"> All</li>
+                        <li class="gallery_list web_btn"> Web Design</li>
+                        <li class="gallery_list graphic_btn"> Graphic Design</li>
+                        <li class="gallery_list artwork_btn">Artwork</li>
                         <!-- стили переделать -->
                     </ul>
                 </nav>
                 <div class="gallery_blocks">
-                    <div class="gallery_block"><img src="assets/image/1.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block"><img src="assets/image/2.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block"><img src="assets/image/3.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block"><img src="assets/image/4.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block"><img src="assets/image/5.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block"><img src="assets/image/6.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block"><img src="assets/image/7.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block"><img src="assets/image/8.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block"><img src="assets/image/9.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block "><img src="assets/image/10.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block "><img src="assets/image/11.jpg" alt="" class="gallery_image"></div>
-                    <div class="gallery_block "><img src="assets/image/12.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block web"><img src="assets/image/1.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block graphic"><img src="assets/image/2.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block artwork"><img src="assets/image/3.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block web"><img src="assets/image/4.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block web"><img src="assets/image/5.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block graphic"><img src="assets/image/6.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block artwork"><img src="assets/image/7.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block graphic"><img src="assets/image/8.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block artwork"><img src="assets/image/9.jpg" alt="" class="gallery_image"></div>
+                    <div class="gallery_block graphic"><img src="assets/image/10.jpg" alt="" class="gallery_image">
+                    </div>
+                    <div class="gallery_block graphic"><img src="assets/image/11.jpg" alt="" class="gallery_image">
+                    </div>
+                    <div class="gallery_block web"><img src="assets/image/12.jpg" alt="" class="gallery_image">
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about_section">
             <div class="wrapper wrapper_about">
                 <h2 class="about_title">About Us</h2>
                 <p class="about_p">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -183,46 +208,56 @@
                 </div>
             </div>
         </section>
-    <section class="quote_section">
-        <div class="wrapper quote_wrapper">
-            <h2 class="quote_title">Get a Quote</h2>
-            <p class="quote_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
-                commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
-                cursus
-                commodo, tortor mauris condimentum nibh.</p>
+        <section class="quote_section">
+            <div class="wrapper quote_wrapper">
+                <h2 class="quote_title">Get a Quote</h2>
+                <p class="quote_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
+                    non
+                    commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
+                    cursus
+                    commodo, tortor mauris condimentum nibh.</p>
 
-            <section class="quote_information">
+                <section class="quote_information">
 
-                <form class="information_form" action="#">
-                    <fieldset class="information_fieldset">
-                        <input required type="text" placeholder="Name (Required)" class="information_input">
-                        <input required type="email" placeholder="Email (Required)" class="information_input ">
-                        <input type="text" placeholder="Subject" class="information_input">
-                        <textarea class="information_textarea" name="textarea" id="textarea" cols="60" rows="12"
-                            placeholder="Describe your project in detail..."></textarea>
-                    </fieldset>
-                </form>
+                    <form id = 'form' class="information_form">
+                        <fieldset class="information_fieldset">
+                            <input required type="text" placeholder="Name (Required)" class="information_input title_input">
+                            <input required type="email" placeholder="Email (Required)" class="information_input email_input">
+                            <input type="text" placeholder="Subject" class="information_input subject_input">
+                            <textarea class="information_textarea" name="textarea" id="textarea" cols="60" rows="12"
+                                placeholder="Describe your project in detail..."></textarea>
+                            <input class='button'   value="Send">
+                        </fieldset>
+                        <!-- <div class="message">
+                            <h3 class="message_title">Письмо отправлено</h3>
+                            <h5 class="message_theme"></h5>
+                            <h5 class="message_about"></h5>
+                            <button class="message_button">OK</button>
+                        </div> -->
+                    </form>
 
-                <section class="informtaion_contact">
-                    <h3 class="contact_title">Contact Information</h3>
-                    <article class="contact_article">
-                        <p class="contact_text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce
-                            vitae aliquam tellus.
-                            Proin
-                            sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
-                            et
-                            consequat felis. </p>
-                        <ul class="contact_list">
-                            <li class="contact_item contact_adress">Elm St. 14/05 Lost City</li>
-                            <li class="contact_item contact_phone">03528 331 86 35</li>
-                            <li class="contact_item contact_email">info@singolo.com</li>
-                        </ul>
-                    </article>
+                    <section class="informtaion_contact">
+                        <h3 class="contact_title">Contact Information</h3>
+                        <article class="contact_article">
+                            <p class="contact_text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+                                Fusce
+                                vitae aliquam tellus.
+                                Proin
+                                sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                                turpis,
+                                et
+                                consequat felis. </p>
+                            <ul class="contact_list">
+                                <li class="contact_item contact_adress">Elm St. 14/05 Lost City</li>
+                                <li class="contact_item contact_phone">03528 331 86 35</li>
+                                <li class="contact_item contact_email">info@singolo.com</li>
+                            </ul>
+                        </article>
+                    </section>
+
                 </section>
-
-            </section>
-        </div>
-    </section>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="wrapper">
@@ -245,7 +280,8 @@
             </section>
         </div>
     </footer>
-    
+
 </body>
 <script src="script.js"></script>
+
 </html>
