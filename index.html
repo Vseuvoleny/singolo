@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="header home_section">
+    <header class="header section">
         <div class="wrapper top_wrapper">
             <h1 class="header_title"> <a href="#">Singolo <span class="title_span">*</span></a> </h1>
             <nav>
@@ -39,10 +39,11 @@
 
                     <div class="slider_blocks active">
                         <div class="slider_item slide1">
-                            <div class="vertical"><img class="vertical_phone" src="./assets/iPhone_Vertical.png" alt="">
+                            <div class="vertical"><img class="vertical_phone slide_img1"
+                                    src="./assets/iPhone_Vertical.png" alt="">
                             </div>
-                            <div class="horizontal"><img class="horizontal_phone" src="./assets/iPhone_Horizontal.png"
-                                    alt=""></div>
+                            <div class="horizontal"><img class="horizontal_phone slide_img1"
+                                    src="./assets/iPhone_Horizontal.png" alt=""></div>
                         </div>
                     </div>
                     <div class="slider_blocks slide2">
@@ -62,7 +63,7 @@
                 </div>
             </div>
         </section>
-        <section class="services_section">
+        <section class="services_section section">
             <div class="wrapper wrapper_services">
                 <h2 class="services_title">Our Services</h2>
                 <p class="services_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -126,7 +127,7 @@
                 </article>
             </div>
         </section>
-        <section class="gallery_section">
+        <section class="gallery_section section">
             <div class="wrapper wrapper_gallery">
                 <h2 class="gallery_title">Portfolio</h2>
                 <p class="gallery_p">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
@@ -159,7 +160,7 @@
                 </div>
             </div>
         </section>
-        <section class="about_section">
+        <section class="about_section section">
             <div class="wrapper wrapper_about">
                 <h2 class="about_title">About Us</h2>
                 <p class="about_p">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -208,7 +209,7 @@
                 </div>
             </div>
         </section>
-        <section class="quote_section">
+        <section class="quote_section section">
             <div class="wrapper quote_wrapper">
                 <h2 class="quote_title">Get a Quote</h2>
                 <p class="quote_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -219,14 +220,16 @@
 
                 <section class="quote_information">
 
-                    <form id = 'form' class="information_form">
+                    <form id='form' class="information_form">
                         <fieldset class="information_fieldset">
-                            <input required type="text" placeholder="Name (Required)" class="information_input title_input">
-                            <input required type="email" placeholder="Email (Required)" class="information_input email_input">
+                            <input required type="text" placeholder="Name (Required)"
+                                class="information_input title_input">
+                            <input required type="email" placeholder="Email (Required)"
+                                class="information_input email_input">
                             <input type="text" placeholder="Subject" class="information_input subject_input">
                             <textarea class="information_textarea" name="textarea" id="textarea" cols="60" rows="12"
                                 placeholder="Describe your project in detail..."></textarea>
-                            <input class='button'   value="Send">
+                            <input class='button' type="submit" value="Send" form="form">
                         </fieldset>
                         <!-- <div class="message">
                             <h3 class="message_title">Письмо отправлено</h3>
@@ -249,8 +252,9 @@
                                 consequat felis. </p>
                             <ul class="contact_list">
                                 <li class="contact_item contact_adress">Elm St. 14/05 Lost City</li>
-                                <li class="contact_item contact_phone">03528 331 86 35</li>
-                                <li class="contact_item contact_email">info@singolo.com</li>
+                                <li><a class="contact_item contact_phone" href=tel:035283318635>03528 331 86 35</a></li>
+                                <li><a class="contact_item contact_email"
+                                        href=mailto:info@singolo.com>info@singolo.com</a></li>
                             </ul>
                         </article>
                     </section>
@@ -259,11 +263,11 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer section">
         <div class="wrapper">
             <section class="footer_section">
                 <div class="footer_copy">
-                    <img src="./assets/copy.png" alt="copyright">
+                    <p class="footer_p">© Copyright 2013</p>
                 </div>
 
                 <section class="footer_block">

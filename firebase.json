@@ -1,17 +1,10 @@
 {
   "hosting": {
-    "site": "singolo-af30a",
-    "public": "y",
+    "public": "Singolo",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }

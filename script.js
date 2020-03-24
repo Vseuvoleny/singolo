@@ -4,17 +4,17 @@ const headerBtn = document.querySelectorAll(".nav_title");
 const gallery = document.querySelectorAll(".gallery_image");
 const radiobtn = document.querySelectorAll(".gallery_list");
 let items = document.querySelectorAll(".slider_blocks");
+
 let currentItem = 0;
 let isEnabled = true;
-// Функции
+// Общая функция для хедера и галереи
 // =======
 const chooseBtn = (element, style) => {
   for (let i = 0; i < element.length; i++) {
     element[i].addEventListener("click", function(event) {
-      element.forEach((el, e) => {
-        if (element[e].classList.contains(style))
-          element[e].classList.remove(style);
-        if (!element[e].classList.contains(style)) {
+      element.forEach(el => {
+        if (el.classList.contains(style)) el.classList.remove(style);
+        if (!el.classList.contains(style)) {
           event.target.classList.add(style);
         }
       });
@@ -30,13 +30,40 @@ for (let anchor of headerBtn) {
     e.preventDefault();
 
     const block = anchor.getAttribute("href");
-
-    document.querySelector("." + block).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+    if (block === "home_section") {
+      document.body.scrollIntoView({
+        behavior: "smooth"
+      });
+    } else {
+      document.querySelector(`.${block}`).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   });
 }
+
+// document.addEventListener("scroll", anchor);
+// function anchor(event) {
+//   event.preventDefault();
+//   const curPos = window.scrollY;
+//   const sections = document.querySelectorAll(".section");
+//   const links = document.querySelectorAll(".nav_title");
+
+//   sections.forEach(elem => {
+//     console.log('тоже')
+//     if (elem.offsetTop <= curPos && elem.offsetTop + elem.offsetHeight > curPos) {
+//       links.forEach(a => {
+//         console.log('тоже работает')
+//         a.classList.remove("activeList");
+//         if (elem.getAttribute("id") === a.getAttribute("href")) {
+//           console.log('работает')
+//           a.classList.add("activeList");
+//         }
+//       });
+//     }
+//   });
+// }
 //  слайдер
 // ========
 const isbackground = () => {
@@ -99,6 +126,51 @@ document.querySelector(".togle.right").addEventListener("click", function() {
     nextItem(currentItem);
   }
 });
+// Скрины
+// ======
+let phones = document.querySelectorAll(".slide_img1");
+let isScreenOn = false;
+let darkscreen = document.createElement("div");
+darkscreen.className = "screen";
+phones.forEach = elem => {
+  elem.addEventListener("click", function() {
+    if (elem) {
+      document.querySelector(".vertical").append(darkscreen);
+      darkscreen.style.cssText = `
+      width:188px;
+      height:333px;
+      left: 161px;
+      bottom: 88px;`;
+      isScreenOn = true;
+    }
+
+    if (elem) {
+      document.querySelector(".horizontal").append(darkscreen);
+      darkscreen.style.cssText = `
+      width:333px;
+      height:188px;
+      top: 195px;
+      right: 239px;`;
+      isScreenOn = true;
+    }
+  });
+};
+// for (let phone of phones) {
+//   phone.addEventListener("click", function() {
+//     if (
+//       document.querySelector(".vertical").lastChild ===
+//       document.querySelector(".screen")
+//     ) {
+//       console.log("Сработала вторая функция");
+//     }
+//     if (
+//       document.querySelector(".horizontal").lastChild ===
+//       document.querySelector(".screen")
+//     ) {
+//       console.log("Сработала вторая функция");
+//     }
+//   });
+// }
 
 // Радиобатн
 chooseBtn(radiobtn, "choosen");
@@ -140,33 +212,36 @@ chooseBtn(gallery, "highlight");
 
 //Кнопка send
 // =========
-document.querySelector(".button").onclick = function auth() {
+document.querySelector(".button").onclick = function auth(event) {
+  event.preventDefault();
   let messageCard = document.createElement("div");
-  let messageAbout = document.querySelector(".title_input").value;
+  let messageAbout = document.querySelector(".subject_input").value;
   let messageDescr = document.querySelector(".information_textarea").value;
-  if (isEnabled) {
+  let name = document.querySelector(".title_input").value;
+  let email = document.querySelector(".email_input").value;
+  if (isEnabled && name && email) {
     messageCard.className = "message";
     document.querySelector(".information_form").after(messageCard);
     messageCard.innerHTML = `                           <h3 class="message_title">Письмо отправлено</h3>
     <h5 class="message_theme">${
-      messageAbout === ''
-        ? messageAbout === "Без темы"
-        : "Тема: " + messageAbout
+      messageAbout === "" ? "Без темы" : "Тема: " + messageAbout
     }</h5>
     <h5 class="message_about">${
-      messageDescr === undefined
-        ? messageDescr === "Без описания"
-        : "Описание: " + messageDescr
+      messageDescr === ""
+        ? "Без описания"
+        : "Описание: " + messageDescr.substr(0, 5)
     }</h5>
     <button class="message_button">OK</button>`;
     isEnabled = false;
+    document.querySelector(".information_form").reset();
   }
+
   document.querySelector(".message_button").onclick = function messOff() {
-    messageCard.remove();
+    document.querySelector(".message").remove();
     isEnabled = true;
   };
-  // setTimeout(function() {
-  //   messageCard.remove();
-  //   isEnabled = true;
-  // }, 6000);
+  setTimeout(function() {
+    messageCard.remove();
+    isEnabled = true;
+  }, 6000);
 };
