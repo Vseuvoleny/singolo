@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   max-width: 100%;
+  scroll-behavior: smooth;
 }
 
 *::before,
@@ -92,11 +93,8 @@ li {
   transition: 0.3s linear;
 }
 
-.nav_title {
-  opacity: 0.6;
-}
 .activeList {
-  opacity: 1;
+  color: #ef6c64;
 }
 
 /* Slider_block */
@@ -219,6 +217,7 @@ main {
   height: 100%;
   background: #f2f2f2;
   border-bottom: 6px solid #ffffff;
+  /* scroll-margin-top: 6vw; */
 }
 
 .services_title {
@@ -293,6 +292,7 @@ main {
   width: 100%;
   background: #2d303a;
   border-bottom: 6px solid #323746;
+  /* scroll-margin-top: 6vw; */
 }
 
 .gallery_title {
@@ -387,6 +387,7 @@ main {
   width: 100%;
   background: #f2f2f2;
   border-bottom: 6px solid #fff;
+  /* scroll-margin-top: 6vw; */
 }
 
 .about_title {
@@ -509,7 +510,6 @@ main {
   line-height: 18px;
   color: #f0d8d9;
   font-weight: 900;
-
   padding-top: 67px;
   letter-spacing: -0.5px;
 }
@@ -741,7 +741,13 @@ main {
   .wrapper {
     width: 100%;
   }
+  .header_title {
+    padding-left: 40px;
+  }
 
+  .header_nav {
+    padding-right: 40px;
+  }
   /* Slider_block 
   =================*/
   main {
@@ -753,8 +759,7 @@ main {
     height: 450px;
   }
   .phone_opacity {
-    max-width: 140px;
-    width: 100%;
+    width: 20vw;
   }
   .slider_blocks {
     max-height: 350px;
@@ -779,10 +784,11 @@ main {
   =============*/
 
   .services_title {
-    padding-top: 47px;
+    padding: 59px 0 0 40px;
   }
 
   .services_text {
+    padding: 0 40px;
     margin-top: 18px;
     max-width: 687px;
     width: 100%;
@@ -793,10 +799,14 @@ main {
   ==================*/
 
   .services_block {
-    max-width: 688px;
     width: 100%;
     margin-top: 28px;
+    padding: 0 40px;
     height: 100%;
+  }
+
+  .services_text {
+    max-width: 100%;
   }
   .services_card {
     max-width: 300px;
@@ -816,7 +826,7 @@ main {
   }
 
   .gallery_title {
-    padding-top: 59px;
+    padding: 59px 0 0 40px;
     margin-bottom: 14px;
   }
 
@@ -824,10 +834,15 @@ main {
     max-width: 695px;
     width: 100%;
     margin-bottom: 12px;
+    padding-left: 40px;
   }
 
   /* label radio btn 
 ====================*/
+
+  .gallery_nav {
+    padding-left: 40px;
+  }
   .gallery_ul {
     max-width: 297px;
     width: 100%;
@@ -837,46 +852,49 @@ main {
 ================== */
 
   .gallery_blocks {
+    align-items: center;
     width: 100%;
-    margin: 28px 0 65px;
+    margin: 18px 0 68px;
+    padding: 0 40px;
+    justify-content: center;
   }
   .gallery_block {
-    max-width: 217px;
-    width: 100%;
+    margin: 10px;
+    width: 217px;
+    height: 183px;
   }
-
+  .gallery_image {
+    width: 217px;
+    height: 183px;
+  }
   /* About_block 
   ===============*/
 
   .about_section {
     height: 100%;
   }
-  .wrapper_about {
-    width: 100%;
-    max-width: 768px;
-  }
+
   .about_title {
-    padding-top: 52px;
+    padding: 59px 0 0 40px;
   }
 
   .about_p {
     width: 100%;
     margin-top: 14px;
     height: 100%;
+    padding: 0 40px;
   }
 
   /* Cards_block */
+  .about_cards {
+    padding: 0 40px;
+  }
 
   .card_art {
     margin-top: 12px;
   }
-  .about_card {
-    max-width: 219px;
-    width: 100%;
-  }
 
   .about_card img {
-    max-width: 219px;
     width: 100%;
   }
   .card_p {
@@ -895,9 +913,8 @@ main {
 
   /* Quote_section
 ================= */
-
-  .quote_title {
-    padding-top: 53px;
+.quote_title {
+    padding-left: 40px;
   }
 
   .quote_text {
@@ -906,26 +923,41 @@ main {
     height: 100%;
     margin-top: 14px;
     margin-bottom: 19px;
+    padding-left: 40px;
   }
 
   /* Quote_form
   ================= */
+  .quote_title {
+    padding-left: 40px;
+  }
+
+  .quote_information {
+    width: 100%;
+    padding: 0 40px 67px;
+  }
   .information_form {
     width: 100%;
-    max-width: 442px;
   }
 
   /* Quote_contact
   ================= */
   .informtaion_contact {
+    padding-left: 20px;
     width: 301px;
   }
+  .contact_text {
+    height: auto;
+  }
 
+  .contact_list {
+    margin-top: 22px;
+  }
   /* Footer
   ============== */
 
   .footer_section {
-    padding: 30px 0;
+    padding: 30px 40px;
   }
 }
 
@@ -954,13 +986,7 @@ main {
   }
   /* Services block
 ================== */
-  .services_title {
-    padding: 30px 37px 0px 24px;
-  }
 
-  .services_text {
-    padding: 18px 37px 0px 24px;
-  }
   .services_block {
     justify-content: center;
     width: 80vw;
@@ -974,38 +1000,31 @@ main {
   /* Gallery
   =========== */
   .gallery_title {
-    padding: 42px 30px 0;
+    padding: 42px 40px 0;
     margin-bottom: 14px;
   }
   .gallery_p {
     max-width: 100%;
     width: auto;
-    margin: 14px 30px 0px;
-  }
-
-  .gallery_nav {
-    margin: 10px 0 25px 30px;
+    margin-top: 14px;
+    padding: 0 40px;
   }
 
   .gallery_blocks {
-    padding: 8.5px 23.5px 35.5px;
+    padding: 0 23.5px 35.5px;
     height: 100%;
-    width: fit-content;
-    padding-bottom: 0;
     margin-bottom: 42px;
     justify-content: space-around;
   }
   .gallery_block {
+    max-width: 100%;
     width: 40vw;
     height: 34vw;
     margin: 6.5px;
-    background-size: cover;
   }
   .gallery_image {
     width: 40vw;
     height: 34vw;
-    margin: 6.5px;
-    background-size: cover;
   }
 
   /* about_us
@@ -1034,35 +1053,59 @@ main {
     padding-bottom: 30px;
     width: 314px;
   }
-  .about_card img{
+  .about_card img {
     max-width: 100%;
   }
 
-  .card_art{
+  .card_art {
     margin-top: 18px;
   }
 
-  .card_p{
+  .card_p {
     margin: 5px 0 9px;
   }
 
   /* Quote_information
   ==================== */
 
-  .quote_information{
-    padding-left:30px; 
+  .quote_information {
     flex-direction: column;
     justify-content: center;
-    width: 80vw;
+    width: 88vw;
+  }
+
+  .information_form {
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .informtaion_contact {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .contact_article {
+    max-width: 100%;
+    flex-flow: column nowrap;
+  }
+
+  .contact_text {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+
+  .contact_item + .contact_item {
+    margin-top: 3.5px;
   }
 
   /* Footer
   ========== */
-  .footer_section{
+  .footer_section {
     justify-content: center;
     align-items: center;
   }
-  .footer_copy{
+  .footer_copy {
     display: none;
   }
 }
