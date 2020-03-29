@@ -7,8 +7,7 @@ let items = document.querySelectorAll(".slider_blocks");
 let currentItem = 0;
 let isEnabled = true;
 
-// const galleryNav = document.querySelector(".gallery_ul");
-// Общая функция для хедера и галереи
+//
 // ==================================
 const chooseBtn = (element, style) => {
   for (let elem of element) {
@@ -22,41 +21,22 @@ const chooseBtn = (element, style) => {
     });
   }
 };
-// хедер
+// Хедер
 // =====
 chooseBtn(headerBtn, "activeList");
-
-// for (let anchor of headerBtn) {
-//   anchor.addEventListener("click", function(e) {
-//     // e.preventDefault();
-
-//     const block = anchor.getAttribute("href").substr(1);
-//     if (block === "home_section") {
-//       document.body.scrollIntoView({
-//         behavior: "smooth"
-//       });
-//     } else {
-//       document.querySelector(`.${block}`).scrollIntoView({
-//         behavior: "smooth",
-//         block: "start"
-//       });
-//     }
-//   });
-// }
-
 document.addEventListener("scroll", anchor);
 function anchor(event) {
   event.preventDefault();
   const curPos = window.scrollY;
   const sections = document.querySelectorAll(".section");
-  const links = document.querySelectorAll(".nav_title");
+  const anchors = document.querySelectorAll(".nav_title");
 
   sections.forEach(elem => {
     if (
       elem.offsetTop <= curPos &&
       elem.offsetTop + elem.offsetHeight > curPos
     ) {
-      links.forEach(a => {
+      anchors.forEach(a => {
         a.classList.remove("activeList");
         if (elem.getAttribute("id") === a.getAttribute("href").substr(1)) {
           a.classList.add("activeList");
@@ -65,7 +45,7 @@ function anchor(event) {
     }
   });
 }
-//  слайдер
+//  Cлайдер
 // ========
 const isbackground = () => {
   if (items[currentItem].classList.contains("slide2")) {
@@ -129,49 +109,24 @@ document.querySelector(".togle.right").addEventListener("click", function() {
 });
 // Скрины
 // ======
-let phones = document.querySelectorAll(".slide_img1");
-let isScreenOn = false;
-let darkscreen = document.createElement("div");
-darkscreen.className = "screen";
-phones.forEach = elem => {
-  elem.addEventListener("click", function() {
-    if (elem) {
-      document.querySelector(".vertical").append(darkscreen);
-      darkscreen.style.cssText = `
-      width:188px;
-      height:333px;
-      left: 161px;
-      bottom: 88px;`;
-      isScreenOn = true;
-    }
+const buttonPhone = document.querySelectorAll(".home_button");
 
-    if (elem) {
-      document.querySelector(".horizontal").append(darkscreen);
-      darkscreen.style.cssText = `
-      width:333px;
-      height:188px;
-      top: 195px;
-      right: 239px;`;
-      isScreenOn = true;
+buttonPhone.forEach(e => {
+  e.addEventListener("click", function screenOn() {
+    let [vertical, horizontal, screenV, screenH] = [
+      document.querySelector(".vertical"),
+      document.querySelector(".horizontal"),
+      document.querySelector(".screen_v"),
+      document.querySelector(".screen_h")
+    ];
+    if (vertical.contains(e)) {
+      screenV.hidden = !screenV.hidden;
+    }
+    if (horizontal.contains(e)) {
+      screenH.hidden = !screenH.hidden;
     }
   });
-};
-// for (let phone of phones) {
-//   phone.addEventListener("click", function() {
-//     if (
-//       document.querySelector(".vertical").lastChild ===
-//       document.querySelector(".screen")
-//     ) {
-//       console.log("Сработала вторая функция");
-//     }
-//     if (
-//       document.querySelector(".horizontal").lastChild ===
-//       document.querySelector(".screen")
-//     ) {
-//       console.log("Сработала вторая функция");
-//     }
-//   });
-// }
+});
 
 // Блок с навигацией и галлерей
 // ============================
@@ -193,8 +148,9 @@ for (let el of radiobtn) {
 }
 chooseBtn(gallery, "highlight");
 
-//Кнопка send
+//Кнопка Send
 // =========
+let messageBox = document.querySelector(".message_container");
 let messageCard = document.createElement("div");
 document
   .querySelector(".information_form")
@@ -206,9 +162,10 @@ document
     let name = document.querySelector(".title_input").value;
     let email = document.querySelector(".email_input").value;
     if (isEnabled && name && email) {
+      messageBox.style.display = "block";
       messageCard.className = "message";
-      document.querySelector(".information_form").after(messageCard);
-      messageCard.innerHTML = `                           <h3 class="message_title">Письмо отправлено</h3>
+      messageBox.prepend(messageCard);
+      messageCard.innerHTML = `<h3 class="message_title">Письмо отправлено</h3>
     <h5 class="message_theme">${
       messageAbout === "" ? "Без темы" : `Тема: ${messageAbout}`
     }</h5>
@@ -225,13 +182,30 @@ document
       .querySelector(".message_button")
       .addEventListener("click", function removeMess() {
         document.querySelector(".message").remove();
+        messageBox.style.display = "none";
         isEnabled = true;
       });
 
     setTimeout(function() {
       isEnabled = true;
-      document.querySelector(".message").remove();
+      if (document.querySelector(".message")) {
+        document.querySelector(".message").remove();
+      }
+
+      messageBox.style.display = "none";
     }, 5000);
   });
-if (messageCard) {
-}
+
+// Бургер Меню
+// ===========
+
+const burger = document.querySelector(".burger_nav");
+const navigation = document.querySelector(".header_nav");
+const background = document.querySelector(".background_mobile");
+
+burger.addEventListener("click", function burgerTogle() {
+  burger.classList.toggle("rotate");
+  navigation.classList.toggle("mobile_sidebar");
+  background.classList.toggle("active");
+  navigation.classList.toggle("header_nav");
+});

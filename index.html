@@ -11,18 +11,15 @@
 </head>
 
 <body>
-    <header id='home_section' class="header section">
+    <header class="header section">
         <div class="wrapper top_wrapper">
             <div class="burger_nav">
-                <div class="burger_li"></div>
-                <div class="burger_li"></div>
-                <div class="burger_li"></div>
             </div>
             <h1 class="header_title"> <a href="#">Singolo <span class="title_span">*</span></a> </h1>
             <nav class="header_nav">
                 <ul class="header_navigation">
                     <li class="list">
-                        <a class="nav_title activeList" href="#">Home</a>
+                        <a class="nav_title activeList" href="#home_section">Home</a>
                     </li>
                     <li class="list">
                         <a class="nav_title" href="#services_section">Services</a>
@@ -37,18 +34,25 @@
             </nav>
         </div>
     </header>
-    <main>
+    <div class="background_mobile"></div>
+    <main id ="home_section">
         <section class="slider_section">
             <div class="slider">
                 <div class="wrapper wrapper_slider">
 
                     <div class="slider_blocks active">
                         <div class="slider_item slide1">
-                            <div class="vertical"><img class="vertical_phone slide_img1"
-                                    src="./assets/iPhone_Vertical.png" alt="">
+                            <div class="vertical">
+                                <div class="screen screen_v" hidden></div>
+                                <div class="home_button">
+                                </div><img class="vertical_phone slide_img1" src="./assets/iPhone_Vertical.png" alt="">
                             </div>
-                            <div class="horizontal"><img class="horizontal_phone slide_img1"
-                                    src="./assets/iPhone_Horizontal.png" alt=""></div>
+
+                            <div class="horizontal">
+                                <div class="home_button button_h"></div>
+                                <div class="screen screen_h" hidden></div>
+                                <img class="horizontal_phone slide_img1" src="./assets/iPhone_Horizontal.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="slider_blocks slide2">
@@ -224,7 +228,9 @@
                     commodo, tortor mauris condimentum nibh.</p>
 
                 <section class="quote_information">
+                    <div class="message_container">
 
+                    </div>
                     <form id='form' class="information_form">
                         <fieldset class="information_fieldset">
                             <input required type="text" placeholder="Name (Required)"
@@ -236,12 +242,6 @@
                                 placeholder="Describe your project in detail..."></textarea>
                             <input class='button' type="submit" value="Send" form="form">
                         </fieldset>
-                        <!-- <div class="message">
-                            <h3 class="message_title">Письмо отправлено</h3>
-                            <h5 class="message_theme"></h5>
-                            <h5 class="message_about"></h5>
-                            <button class="message_button">OK</button>
-                        </div> -->
                     </form>
 
                     <section class="informtaion_contact">
